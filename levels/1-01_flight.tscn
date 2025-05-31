@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://me2c5ddpyhkq"]
+[gd_scene load_steps=14 format=4 uid="uid://me2c5ddpyhkq"]
 
 [ext_resource type="PackedScene" uid="uid://cxo2r1hb7u2ss" path="res://scenes/level_base.tscn" id="1_aot7u"]
 [ext_resource type="Material" uid="uid://blybopg863h23" path="res://assets/shaders/flight.tres" id="2_4gadj"]
@@ -9,6 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://cujekff5hkfk7" path="res://assets/inputs/keyboard_arrow_right_outline.png" id="7_cium7"]
 [ext_resource type="Texture2D" uid="uid://cft15naqfat3j" path="res://assets/inputs/keyboard_arrow_down_outline.png" id="8_xwcww"]
 [ext_resource type="Texture2D" uid="uid://b7p2opchkfodw" path="res://assets/inputs/keyboard_arrow_up_outline.png" id="9_lblav"]
+[ext_resource type="Texture2D" uid="uid://blcux4pauvqjs" path="res://assets/inputs/keyboard_a_outline.png" id="10_5ecfb"]
+[ext_resource type="Texture2D" uid="uid://bsnpai5ww1yug" path="res://assets/inputs/keyboard_w_outline.png" id="11_d0b5m"]
+[ext_resource type="Texture2D" uid="uid://dhr6xxmh56phi" path="res://assets/inputs/keyboard_s_outline.png" id="12_1llqx"]
+[ext_resource type="Texture2D" uid="uid://og428nip2rnq" path="res://assets/inputs/keyboard_d_outline.png" id="13_34t5n"]
 
 [node name="LevelBase" instance=ExtResource("1_aot7u")]
 level_name = "Flight"
@@ -71,3 +75,23 @@ texture = ExtResource("8_xwcww")
 position = Vector2(685.12, 862.12)
 scale = Vector2(0.33, 0.33)
 texture = ExtResource("9_lblav")
+
+[node name="KeyboardAOutline" type="Sprite2D" parent="." index="12"]
+position = Vector2(654, 975)
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("10_5ecfb")
+
+[node name="KeyboardWOutline" type="Sprite2D" parent="." index="13"]
+position = Vector2(685, 944)
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("11_d0b5m")
+
+[node name="KeyboardSOutline" type="Sprite2D" parent="." index="14"]
+position = Vector2(685, 975)
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("12_1llqx")
+
+[node name="KeyboardDOutline" type="Sprite2D" parent="." index="15"]
+position = Vector2(716, 975)
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("13_34t5n")
