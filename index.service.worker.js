@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1748887025|6253132';
+const CACHE_VERSION = '1748887460|6209740';
 /** @type {string} */
 const CACHE_PREFIX = 'Beam Me Up-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
