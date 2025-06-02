@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Smokin My Laser"
+config/name="Beam Me Up"
 run/main_scene="uid://dg3shn8d54wck"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="uid://dophvjcvkvfh2"

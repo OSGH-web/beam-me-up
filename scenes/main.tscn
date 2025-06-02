@@ -1,11 +1,12 @@
-[gd_scene load_steps=19 format=3 uid="uid://dg3shn8d54wck"]
+[gd_scene load_steps=24 format=3 uid="uid://dg3shn8d54wck"]
 
 [ext_resource type="Script" uid="uid://c8rtmo3o8q4vw" path="res://scripts/main.gd" id="1_o5qli"]
 [ext_resource type="StyleBox" uid="uid://cn1chxlsybisf" path="res://assets/styles/sbf_focus.tres" id="2_tefeu"]
-[ext_resource type="StyleBox" uid="uid://byruekc6swxep" path="res://assets/styles/sbf_mid.tres" id="2_ya4ey"]
+[ext_resource type="Texture2D" uid="uid://bbioiltjiwpro" path="res://assets/sprites/beam_me_up_logo_foreground.png" id="3_jbj1t"]
 [ext_resource type="Texture2D" uid="uid://d2qruhdnnbuwn" path="res://assets/sprites/title_screen_player.png" id="4_85g3d"]
 [ext_resource type="StyleBox" uid="uid://002qwq5rvs87" path="res://assets/styles/sbf_light.tres" id="4_choun"]
 [ext_resource type="LabelSettings" uid="uid://cbw7oatl30dvl" path="res://assets/styles/label_33px.tres" id="4_eb6dy"]
+[ext_resource type="Texture2D" uid="uid://dp6hl50um5l0i" path="res://assets/sprites/beam_me_up_logo_background.png" id="4_muem4"]
 [ext_resource type="Theme" uid="uid://bcn6jcu02pjx0" path="res://assets/themes/standard_font_theme.theme" id="4_o6xl0"]
 [ext_resource type="Material" uid="uid://cmg6vu3hj2ryo" path="res://assets/shaders/square.tres" id="5_tefeu"]
 [ext_resource type="Material" uid="uid://db8q5jqucir4j" path="res://assets/shaders/titlescreen-beam-material.tres" id="5_tipki"]
@@ -14,6 +15,46 @@
 [ext_resource type="LabelSettings" uid="uid://e83jtcakcvg" path="res://assets/styles/label_22px.tres" id="7_a8y0u"]
 [ext_resource type="Theme" uid="uid://cfwn213bg0kih" path="res://assets/themes/button_33px.tres" id="8_a8y0u"]
 [ext_resource type="Texture2D" uid="uid://bedt2axylgmhu" path="res://assets/sprites/player beam particle.png" id="12_eb6dy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jkv2x"]
+
+[sub_resource type="Animation" id="Animation_muem4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BeamMeUpLogoForeground:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(612, 72)]
+}
+
+[sub_resource type="Animation" id="Animation_jbj1t"]
+resource_name = "background-movement"
+length = 4.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BeamMeUpLogoForeground:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(612, 72), Vector2(636, 72), Vector2(636, 48), Vector2(636, 72), Vector2(612, 72)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dp3eg"]
+_data = {
+&"RESET": SubResource("Animation_muem4"),
+&"background-movement": SubResource("Animation_jbj1t")
+}
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_trceg"]
 particles_animation = true
@@ -93,12 +134,23 @@ anchor_top = 0.1
 anchor_right = 0.224299
 anchor_bottom = 0.1
 offset_left = 276.0
-offset_top = 144.0
+offset_top = 120.0
 offset_right = 1644.0
-offset_bottom = 276.0
-theme_override_styles/panel = ExtResource("2_ya4ey")
+offset_bottom = 252.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_jkv2x")
+
+[node name="BeamMeUpLogoBackground" type="Sprite2D" parent="TitlePanel"]
+position = Vector2(615, 48)
+scale = Vector2(4, 4)
+texture = ExtResource("4_muem4")
+
+[node name="BeamMeUpLogoForeground" type="Sprite2D" parent="TitlePanel"]
+position = Vector2(612, 72)
+scale = Vector2(4, 4)
+texture = ExtResource("3_jbj1t")
 
 [node name="Title" type="Label" parent="TitlePanel"]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -112,6 +164,13 @@ scale = Vector2(3, 3)
 text = "SMOKIN MY LASER"
 label_settings = ExtResource("4_eb6dy")
 horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TitlePanel"]
+libraries = {
+&"": SubResource("AnimationLibrary_dp3eg")
+}
+autoplay = "background-movement"
+speed_scale = 0.25
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 clip_contents = true
