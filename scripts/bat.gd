@@ -9,7 +9,6 @@ var speed = 72;
 @onready var ray_l: RayCast2D = $RayCastLeft
 @onready var ray_r: RayCast2D = $RayCastRight
 
-
 func _physics_process(_delta: float) -> void:
 	if state == States.IDLE:
 		velocity = Vector2(0, 0)

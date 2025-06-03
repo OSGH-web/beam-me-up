@@ -28,6 +28,10 @@ var gameStateDisabled = false
 enum BGM_TRACKS {ONE, TWO}
 var active_bgm_track = BGM_TRACKS.ONE
 
+# used in _fade_in_stream() and _fade_out_stream()
+const mute_vol = -48.0
+const fade_time = 0.5
+
 # gameMode NONE prevents timer from being started due to input on the title screen.
 enum GameModes {NONE, ARCADE, TIME_TRIAL}
 @onready var gameMode: GameModes
@@ -134,13 +138,9 @@ func load_next_level():
 		level_path = "res://scenes/main.tscn"
 	game_started = false
 	get_tree().change_scene_to_file(level_path)
-	
-	
 	# Must go after changing scene to avoid issues.
 	gameStateDisabled = false
 	
-
-
 func _display_info_duration(text: String, duration: float):
 	%GameInfo.text = text
 	%GameInfo.visible = true
@@ -196,8 +196,7 @@ func _lives_count_up():
 		lives += 1
 		extraLivesDivisor += 1
 		%ExtraLife.play()
-		
-	
+			
 func _score_count_down():
 	var player = get_player()
 	var frameCounter = 0
@@ -252,9 +251,6 @@ func on_player_died():
 			time_trial_reset()
 			gameStateDisabled = false
 
-const mute_vol = -48.0
-const fade_time = 0.5
-
 func set_background_music(level_index):
 	var background_file
 	if level_index < 5:
@@ -303,7 +299,6 @@ func set_background_pitch_scale(use_lowered_pitch):
 		pitch_scale = 0.67
 	background_music1.pitch_scale = pitch_scale
 	background_music2.pitch_scale = pitch_scale
-
 
 func get_player(): 
 	var level = get_tree().get_current_scene()

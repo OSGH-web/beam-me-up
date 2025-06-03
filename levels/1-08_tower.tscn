@@ -215,28 +215,28 @@ position = Vector2(877, 1332)
 position = Vector2(421, 1548)
 
 [node name="GasCan2" parent="GasCans" index="2" instance=ExtResource("5_okkjo")]
-position = Vector2(877, 1164)
+position = Vector2(768, 1164)
 
 [node name="GasCan4" parent="GasCans" index="3" instance=ExtResource("5_okkjo")]
-position = Vector2(877, 1092)
+position = Vector2(768, 1092)
 
 [node name="GasCan5" parent="GasCans" index="4" instance=ExtResource("5_okkjo")]
-position = Vector2(877, 1116)
+position = Vector2(768, 1116)
 
 [node name="GasCan6" parent="GasCans" index="5" instance=ExtResource("5_okkjo")]
-position = Vector2(877, 1140)
+position = Vector2(768, 1140)
 
 [node name="GasCan7" parent="GasCans" index="6" instance=ExtResource("5_okkjo")]
-position = Vector2(853, 1140)
+position = Vector2(744, 1140)
 
 [node name="GasCan8" parent="GasCans" index="7" instance=ExtResource("5_okkjo")]
-position = Vector2(853, 1164)
+position = Vector2(744, 1164)
 
 [node name="GasCan9" parent="GasCans" index="8" instance=ExtResource("5_okkjo")]
-position = Vector2(853, 1116)
+position = Vector2(744, 1116)
 
 [node name="GasCan10" parent="GasCans" index="9" instance=ExtResource("5_okkjo")]
-position = Vector2(853, 1092)
+position = Vector2(744, 1092)
 
 [node name="EndZone" parent="." index="17" instance=ExtResource("6_n07cb")]
 position = Vector2(649, 1800)
