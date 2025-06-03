@@ -28,7 +28,6 @@ func process_all_levels():
 			continue
 
 		var level_instance = scene.instantiate()
-
 		level_instance.get_node("Player").get_node("Camera").queue_free()
 
 		# Clear previous level

@@ -70,14 +70,12 @@ func _get_friction():
 				return FRICTION
 
 	return 0.0;
-
-
+	
 func _input(event):
 	if event.is_action_pressed("ui_brake"):
 		airbrake_pressed = true
 	if event.is_action_released("ui_brake"):
 		airbrake_pressed = false
-
 
 func _physics_process(delta):
 	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
@@ -216,7 +214,6 @@ func _update_particles(dir: Vector2):
 		angle = 315 * PI / 180
 
 	$Node2D.rotation = angle
-
 
 func _setup_camera_limits(map_width_px, map_height_px):
 	# by default, restrict the camera to the bounding box of the level
