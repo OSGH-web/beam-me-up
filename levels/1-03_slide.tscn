@@ -21,7 +21,7 @@ height_in_tiles = 32
 
 [node name="Player" parent="." index="0"]
 position = Vector2(24, 192)
-FUEL = 750
+FUEL = 500
 
 [node name="Terrain" parent="." index="1"]
 tile_map_data = PackedByteArray("AAAAAAoAAAAAAAIAAAABAAoAAAABAAIAAAACAAoAAAABAAIAAAADAAoAAAABAAIAAAAEAAoAAAABAAIAAAAFAAoAAAACAAIAAAAGAAoAAAADAAIAAAAGAAkAAAADAAEAAAAGAAgAAAADAAEAAAAGAAcAAAADAAEAAAAMAAoABQABAAAAAAANAAoABQABAAAAAAAOAAoABQABAAAAAAAPAAoABQABAAAAAAAQAAoABQABAAAAAAARAAoABQABAAAAAAASAAoABQABAAAAAAATAAoABQABAAAAAAAUAAoABQABAAAAAAAVAAoABQABAAAAAAAWAAoABQABAAAAAAAXAAoABQABAAAAAAAYAAoABQABAAAAAAAZAAoABQABAAAAAAAaAAoABQABAAAAAAAbAAoABQABAAAAAAAcAAoABQABAAAAAAAdAAoABQABAAAAAAA2AA8AAAAAAAIAAAA3AA8AAAABAAIAAAA4AA8AAAABAAIAAAA5AA8AAAABAAIAAAA2AA0AAAAAAAEAAAA2AA4AAAAAAAEAAAA6AA8AAAABAAIAAAA7AA8AAAABAAIAAAA8AA8AAAABAAIAAAA9AA8AAAABAAIAAAA+AA0AAAADAAEAAAA+AA4AAAADAAEAAAA+AA8AAAADAAIAAABFAA0ABQABAAAAAABGAA0ABQABAAAAAABHAA0ABQABAAAAAABIAA0ABQABAAAAAABJAA0ABQABAAAAAABKAA0ABQABAAAAAABLAA0ABQABAAAAAABMAA0ABQABAAAAAABNAA0ABQABAAAAAABOAA0ABQABAAAAAABPAA0ABQABAAAAAABQAA0ABQABAAAAAABRAA0ABQABAAAAAABSAA0ABQABAAAAAABTAA0ABQABAAAAAABUAA0ABQABAAAAAABVAA0ABQABAAAAAABWAA0ABQABAAAAAABXAA0ABQABAAAAAABYAA0ABQABAAAAAABZAA0ABQABAAAAAABaAA0ABQABAAAAAABbAA0ABQABAAAAAAB9ABEABQABAAAAAAB+ABEABQABAAAAAAB/ABEABQABAAAAAACAABEABQABAAAAAACBABEABQABAAAAAACCABEABQABAAAAAACDABEABQABAAAAAACEABEABQABAAAAAACFABEABQABAAAAAACGABEABQABAAAAAACHABEABQABAAAAAACIABEABQABAAAAAACJABEABQABAAAAAACKABEABQABAAAAAACLABEABQABAAAAAACMABEABQABAAAAAACNABEABQABAAAAAACOABEABQABAAAAAACPABEABQABAAAAAACQABEABQABAAAAAACRABEABQABAAAAAACSABEABQABAAAAAACTABEABQABAAAAAACUABEABQABAAAAAAA=")
@@ -365,21 +365,97 @@ position = Vector2(4696, 696)
 [node name="Spike99" parent="Spikes" index="98" instance=ExtResource("6_fbkn2")]
 position = Vector2(4696, 696)
 
+[node name="Spike100" parent="Spikes" index="99" instance=ExtResource("6_fbkn2")]
+position = Vector2(4360, 696)
+
+[node name="Spike101" parent="Spikes" index="100" instance=ExtResource("6_fbkn2")]
+position = Vector2(4408, 696)
+
+[node name="Spike102" parent="Spikes" index="101" instance=ExtResource("6_fbkn2")]
+position = Vector2(4504, 696)
+
+[node name="Spike103" parent="Spikes" index="102" instance=ExtResource("6_fbkn2")]
+position = Vector2(4456, 696)
+
+[node name="Spike104" parent="Spikes" index="103" instance=ExtResource("6_fbkn2")]
+position = Vector2(4552, 696)
+
+[node name="Spike105" parent="Spikes" index="104" instance=ExtResource("6_fbkn2")]
+position = Vector2(4600, 696)
+
+[node name="Spike106" parent="Spikes" index="105" instance=ExtResource("6_fbkn2")]
+position = Vector2(4648, 696)
+
+[node name="Spike107" parent="Spikes" index="106" instance=ExtResource("6_fbkn2")]
+position = Vector2(4696, 696)
+
+[node name="Spike108" parent="Spikes" index="107" instance=ExtResource("6_fbkn2")]
+position = Vector2(4696, 696)
+
+[node name="Spike109" parent="Spikes" index="108" instance=ExtResource("6_fbkn2")]
+position = Vector2(4728, 304)
+rotation = 4.71239
+
+[node name="Spike110" parent="Spikes" index="109" instance=ExtResource("6_fbkn2")]
+position = Vector2(4728, 352)
+rotation = 4.71239
+
+[node name="Spike111" parent="Spikes" index="110" instance=ExtResource("6_fbkn2")]
+position = Vector2(4728, 400)
+rotation = 4.71239
+
+[node name="Spike112" parent="Spikes" index="111" instance=ExtResource("6_fbkn2")]
+position = Vector2(4728, 256)
+rotation = 4.71239
+
+[node name="Spike113" parent="Spikes" index="112" instance=ExtResource("6_fbkn2")]
+position = Vector2(4728, 208)
+rotation = 4.71239
+
+[node name="Spike114" parent="Spikes" index="113" instance=ExtResource("6_fbkn2")]
+position = Vector2(4728, 160)
+rotation = 4.71239
+
+[node name="Spike115" parent="Spikes" index="114" instance=ExtResource("6_fbkn2")]
+position = Vector2(4728, 112)
+rotation = 4.71239
+
 [node name="GasCan" parent="." index="10" instance=ExtResource("7_kbwtv")]
 position = Vector2(1344, 344)
 
-[node name="GasCan2" parent="." index="11" instance=ExtResource("7_kbwtv")]
+[node name="GasCan4" parent="." index="11" instance=ExtResource("7_kbwtv")]
+position = Vector2(4704, 88)
+
+[node name="GasCan5" parent="." index="12" instance=ExtResource("7_kbwtv")]
+position = Vector2(4704, 136)
+
+[node name="GasCan6" parent="." index="13" instance=ExtResource("7_kbwtv")]
+position = Vector2(4704, 184)
+
+[node name="GasCan7" parent="." index="14" instance=ExtResource("7_kbwtv")]
+position = Vector2(4704, 232)
+
+[node name="GasCan8" parent="." index="15" instance=ExtResource("7_kbwtv")]
+position = Vector2(4704, 280)
+
+[node name="GasCan9" parent="." index="16" instance=ExtResource("7_kbwtv")]
+position = Vector2(4704, 328)
+
+[node name="GasCan10" parent="." index="17" instance=ExtResource("7_kbwtv")]
+position = Vector2(4704, 376)
+
+[node name="GasCan2" parent="." index="18" instance=ExtResource("7_kbwtv")]
 position = Vector2(1404, 344)
 
-[node name="GasCan3" parent="." index="12" instance=ExtResource("7_kbwtv")]
+[node name="GasCan3" parent="." index="19" instance=ExtResource("7_kbwtv")]
 position = Vector2(1464, 344)
 
-[node name="KeyboardSpaceOutline" type="Sprite2D" parent="." index="13"]
+[node name="KeyboardSpaceOutline" type="Sprite2D" parent="." index="20"]
 position = Vector2(1350, 145)
 scale = Vector2(2, 2)
 texture = SubResource("CompressedTexture2D_j4k1b")
 
-[node name="XboxButtonAOutline" type="Sprite2D" parent="." index="14"]
+[node name="XboxButtonAOutline" type="Sprite2D" parent="." index="21"]
 position = Vector2(1456, 146)
 scale = Vector2(1.14062, 1.14062)
 texture = ExtResource("7_d0thh")
