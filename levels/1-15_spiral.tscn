@@ -344,6 +344,5 @@ position = Vector2(384, 272)
 position = Vector2(80, 704)
 
 [node name="ViewportBackground" parent="CanvasLayer" index="0"]
-visible = false
 material = ExtResource("2_j0t1p")
 metadata/_edit_use_anchors_ = true
