@@ -13,6 +13,8 @@ func _ready():
 
 	if OS.get_name() == "Web":
 		%QuitToDesktopButton.hide()  # or queue_free() if you want to remove it completely
+		%ClearSaveButton.focus_neighbor_bottom = %ArcadeButton.get_path()
+		%ArcadeButton.focus_neighbor_top = %ClearSaveButton.get_path()
 
 func _on_arcade_button_pressed() -> void:
 	GameManager.load_first_level()
