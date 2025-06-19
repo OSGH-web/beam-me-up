@@ -7,6 +7,9 @@ func _ready() -> void:
 	_init_reset_stage_button()
 	_init_time_trials_button()
 
+	if OS.get_name() == "Web":
+		%QuitButton.hide()  # or queue_free() if you want to remove it completely
+
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_pause"):
 		toggle_pause()
